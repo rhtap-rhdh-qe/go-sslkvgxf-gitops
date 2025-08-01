@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-sslkvgxf
+  janus-idp.io/tekton: go-sslkvgxf
+  backstage.io/kubernetes-id: go-sslkvgxf
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-sslkvgxf
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
